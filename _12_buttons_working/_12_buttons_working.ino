@@ -1,4 +1,7 @@
-// May 2, 2014
+//Version 3 July , 2015
+//by Evan Nordquist
+//Changes in Version 3: risingEdge updated to fallingEdge  (it now registers pressing the button rather than releasing the button)
+//Version 2 May 2, 2014
 //by Evan N.
 //Modified from a 2_button file written Nov 2,2014 by Julia C. and Evan N. 
 //Using a Teensy++2.0  microcontroller to make a plug-and-play arcade controller.
@@ -61,7 +64,7 @@ void setup() {
 void loop() {
   if (pushbuttonUP.update()) // if the input has changed
   { 
-    if (pushbuttonUP.risingEdge()) // button was pressed (as opposed to released)
+    if (pushbuttonUP.fallingEdge()) // button was pressed (as opposed to released)
     {
       Keyboard.set_key1(KEY_UP);
       Keyboard.send_now();
@@ -76,7 +79,7 @@ void loop() {
   
   if (pushbuttonDOWN.update()) // if the input has changed
   { 
-    if (pushbuttonDOWN.risingEdge()) // button was pressed
+    if (pushbuttonDOWN.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_DOWN);
       Keyboard.send_now();
@@ -89,7 +92,7 @@ void loop() {
 
   if (pushbuttonLEFT.update()) // if the input has changed
   { 
-    if (pushbuttonLEFT.risingEdge()) // button was pressed (as opposed to released)
+    if (pushbuttonLEFT.fallingEdge()) // button was pressed (as opposed to released)
     {
       Keyboard.set_key1(KEY_LEFT);
       Keyboard.send_now();
@@ -102,7 +105,7 @@ void loop() {
 
   if (pushbuttonRIGHT.update()) // if the input has changed
   { 
-    if (pushbuttonRIGHT.risingEdge()) // button was pressed (as opposed to released)
+    if (pushbuttonRIGHT.fallingEdge()) // button was pressed (as opposed to released)
     {
       Keyboard.set_key1(KEY_RIGHT);
       Keyboard.send_now();
@@ -117,7 +120,7 @@ void loop() {
   
   if (pushbuttonY.update()) // if the input has changed
   { 
-    if (pushbuttonY.risingEdge()) // button was pressed
+    if (pushbuttonY.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_Y);
       Keyboard.send_now();
@@ -130,7 +133,7 @@ void loop() {
   
   if (pushbuttonB.update()) // if the input has changed
   { 
-    if (pushbuttonB.risingEdge()) // button was pressed
+    if (pushbuttonB.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_B);
       Keyboard.send_now();
@@ -143,7 +146,7 @@ void loop() {
   
   if (pushbuttonX.update()) // if the input has changed
   { 
-    if (pushbuttonX.risingEdge()) // button was pressed
+    if (pushbuttonX.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_X);
       Keyboard.send_now();
@@ -155,7 +158,7 @@ void loop() {
   }  
   if (pushbuttonA.update()) // if the input has changed
   { 
-    if (pushbuttonA.risingEdge()) // button was pressed
+    if (pushbuttonA.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_A);
       Keyboard.send_now();
@@ -168,7 +171,7 @@ void loop() {
     
   if (pushbuttonSTART.update()) // if the input has changed
   { 
-    if (pushbuttonSTART.risingEdge()) // button was pressed
+    if (pushbuttonSTART.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_ENTER);
       Keyboard.send_now();
@@ -181,7 +184,7 @@ void loop() {
   
   if (pushbuttonSELECT.update()) // if the input has changed
   { 
-    if (pushbuttonSELECT.risingEdge()) // button was pressed
+    if (pushbuttonSELECT.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_SPACE);
       Keyboard.send_now();
@@ -194,7 +197,7 @@ void loop() {
   
   if (pushbuttonL.update()) // if the input has changed
   { 
-    if (pushbuttonL.risingEdge()) // button was pressed
+    if (pushbuttonL.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_L);
       Keyboard.send_now();
@@ -207,7 +210,7 @@ void loop() {
   
   if (pushbuttonR.update()) // if the input has changed
   { 
-    if (pushbuttonR.risingEdge()) // button was pressed
+    if (pushbuttonR.fallingEdge()) // button was pressed
     {
       Keyboard.set_key1(KEY_R);
       Keyboard.send_now();
